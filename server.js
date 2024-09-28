@@ -1,13 +1,9 @@
 var express = require('express');
-const route = require('express').Router();
+var routes = require('./routes')
 const app = express()
 const port = process.env.PORT || 2000 
 
-route.get('/', (request, response, next) => {
-    response.json('Brandon Sill');
-})
-
-app.use('/', route);
+app.use('/', routes);
 
 app.listen(port, () => {
     console.log(`Hello from port ${port}`)

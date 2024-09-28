@@ -1,0 +1,23 @@
+{
+    "contact": {
+        "firstName": "Brian",
+        "lastName": "Hoffman",
+        "email": "britul.37@gmail.com",
+        "favoriteColor": "blue",
+        "birthday": "6/7/2001"
+    },
+    "contact2": {
+        "firstName": "Kaylee",
+        "lastName": "Hoffman",
+        "email": "Kayl.37@gmail.com",
+        "favoriteColor": "green",
+        "birthday": "6/8/2002"
+    },
+    "contact3": {
+        "firstName": "Coutney",
+        "lastName": "Hoffman",
+        "email": "courty.37@gmail.com",
+        "favoriteColor": "white",
+        "birthday": "4/8/2003"
+    }
+}

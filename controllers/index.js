@@ -42,7 +42,7 @@ async function insertOneContact(req, res, next) {
     .insertOne(newUser)
     .then((response) => {
       if (response.acknowledged) {
-        res.status(202).json(response.insertedId);
+        res.status(201).json(response.insertedId);
       } else {
         res.status(500).json(response.error);
       }
@@ -103,7 +103,7 @@ async function updateOneContact(req, res, next) {
             res.status(202).json('ID did not match any current data');
           }
         } else {
-          res.status(200).send();
+          res.status(204).send();
         }
       } else {
         res.status(500).json(response.error || 'Could not update due to unknown error');

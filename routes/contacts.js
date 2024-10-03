@@ -1,12 +1,10 @@
 const routes = require('express').Router();
-const controllers = require('../controllers');
+const controller = require('../controllers');
 
-routes.get('/', (req, res, next) => {
-    if (req.query.id) {
-      controllers.getOneContact(req, res, next); // Call getOneContact when an ID is present
-    } else {
-      controllers.getAllContacts(req, res, next); // Otherwise, call getAllContacts
-    }
-  });
+routes.get('/', controller.getAllContacts);
+routes.get('/:id', controller.getOneContact);
+routes.post('/', controller.insertOneContact);
+routes.delete('/:id', controller.deleteOneContact);
+routes.put('/:id', controller.updateOneContact);
 
 module.exports = routes;

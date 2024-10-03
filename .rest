@@ -6,7 +6,33 @@ GET http://localhost:2000/contacts HTTP/1.1
 
 ###
 
-GET http://localhost:2000/contacts?id=66f8309196acb6bd3e67d0e9 HTTP/1.1
+GET http://localhost:2000/contacts/66f8309196acb6bd3e67d0e9 HTTP/1.1
+
+###
+
+POST http://localhost:2000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Coagula",
+    "lastName": "Gimes",
+    "email": "coagulate.64@gmail.com",
+    "favoriteColor": "Gray",
+    "birthday": "8/3/2003"
+}
+
+###
+DELETE http://localhost:2000/contacts/66fc50ee2026b5c874dd0ef4 HTTP/1.1
+
+###
+
+PUT http://localhost:2000/contacts/66fb89d7557476667be57868 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Coag1"
+} 
+
 
 # REQUESTS ON RENDER
 

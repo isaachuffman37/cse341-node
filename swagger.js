@@ -8,7 +8,7 @@ const doc = {
     description: 'An API that returns temples'
   },
   host: process.env.HOST,
-  schemes: ['http', 'https'],
+  schemes: [process.env.SCHEME],
 };
 
 const outputFile = './swagger-output.json';

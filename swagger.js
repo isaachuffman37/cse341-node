@@ -1,11 +1,13 @@
 const swaggerAutogen = require('swagger-autogen')();
+const dotenv = require('dotenv');
+dotenv.config();
 
 const doc = {
   info: {
     title: 'My Contacts API',
     description: 'An API that returns temples'
   },
-  host: 'localhost:2000/contacts'
+  host: process.env.HOST
 };
 
 const outputFile = './swagger-output.json';

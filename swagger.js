@@ -7,7 +7,8 @@ const doc = {
     title: 'My Contacts API',
     description: 'An API that returns temples'
   },
-  host: process.env.HOST
+  host: process.env.HOST,
+  schemes: ['http', 'https'],
 };
 
 const outputFile = './swagger-output.json';

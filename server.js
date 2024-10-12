@@ -3,7 +3,9 @@ const bodyParser = require('body-parser');
 const { MongoClient } = require('mongodb');
 const mongodb = require('./db/connect');
 var baseRoutes = require('./routes');
-var contactRoute = require('./routes/contacts');
+var contactRoutes = require('./routes/contacts');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger-output.json');
 const app = express();
 const port = process.env.PORT || 2000;
 
@@ -25,4 +27,5 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/contacts', contactRoute);
+  .use('/contacts', contactRoutes)
+  .use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
